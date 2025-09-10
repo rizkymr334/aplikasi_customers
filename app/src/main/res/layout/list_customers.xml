@@ -1,16 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:layout_marginBottom="12dp"
-    android:elevation="4dp"
-    >
+    android:layout_marginVertical="8dp"
+    android:layout_marginHorizontal="12dp"
+    android:backgroundTint="@android:color/white"
+    app:cardCornerRadius="16dp"
+    app:cardElevation="6dp">
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        android:padding="12dp">
+        android:padding="16dp">
 
         <!-- Top Row: Name + Icons -->
         <LinearLayout
@@ -25,49 +28,64 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:textStyle="bold"
-                android:textSize="16sp"
-                android:textColor="#000000" />
+                android:textSize="18sp"
+                android:textColor="#212121"
+                android:text="Nama Customer" />
 
             <ImageView
                 android:id="@+id/btnEdit"
-                android:layout_width="24dp"
-                android:layout_height="24dp"
-                android:src="@android:drawable/ic_menu_edit"
-                android:layout_marginEnd="8dp"
+                android:layout_width="28dp"
+                android:layout_height="28dp"
+                android:src="@drawable/ic_edit"
+                android:tint="#4CAF50"
+                android:layout_marginEnd="12dp"
                 android:contentDescription="Edit" />
 
             <ImageView
                 android:id="@+id/btnDelete"
-                android:layout_width="24dp"
-                android:layout_height="24dp"
-                android:src="@android:drawable/ic_menu_delete"
+                android:layout_width="28dp"
+                android:layout_height="28dp"
+                android:src="@drawable/ic_delete"
+                android:tint="#F44336"
                 android:contentDescription="Delete" />
         </LinearLayout>
 
+        <!-- Detail Info -->
         <TextView
             android:id="@+id/tvCustomerDob"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:text="📅 12/12/2000"
+            android:textSize="14sp"
+            android:textColor="#616161"
             android:layout_marginTop="8dp" />
 
         <TextView
             android:id="@+id/tvCustomerPhone"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="8dp" />
+            android:text="📞 0812-3456-7890"
+            android:textSize="14sp"
+            android:textColor="#616161"
+            android:layout_marginTop="4dp" />
 
         <TextView
             android:id="@+id/tvCustomerEmail"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:autoLink="email"
-            android:layout_marginTop="8dp" />
+            android:text="✉️ email@gmail.com"
+            android:textSize="14sp"
+            android:textColor="#616161"
+            android:layout_marginTop="4dp" />
 
         <TextView
             android:id="@+id/tvCustomerAccount"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="8dp" />
-
+            android:text="🏦 Account: 123456"
+            android:textSize="14sp"
+            android:textColor="#616161"
+            android:layout_marginTop="4dp" />
     </LinearLayout>
-</androidx.cardview.widget.CardView>
+</com.google.android.material.card.MaterialCardView>
